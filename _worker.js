@@ -7,7 +7,7 @@ import { connect } from 'cloudflare:sockets';
 
 // How to generate your own UUID:
 // https://www.uuidgenerator.net/
-let userID = '89b3cbba-e6ac-485a-9481-976a0415eab9';
+let userID = '';
 
 // https://www.nslookup.io/domains/bpb.yousef.isegaro.com/dns-records/
 const proxyIPs= ['bpb.yousef.isegaro.com'];
@@ -1116,18 +1116,18 @@ function generateRemark(index, port, protocol, fragType) {
     switch (index) {
         case 0:
         case 1:
-            remark = `💦 ${protocol}${type} - Domain ${index + 1} : ${port}`;
+            remark = ` ${protocol}${type} - Domain ${index + 1} : ${port}`;
             break;
         case 2:
         case 3:
-            remark = `💦 ${protocol}${type} - IPv4 ${index - 1} : ${port}`;
+            remark = ` ${protocol}${type} - IPv4 ${index - 1} : ${port}`;
             break;
         case 4:
         case 5:
-            remark = `💦 ${protocol}${type} - IPv6 ${index - 3} : ${port}`;
+            remark = ` ${protocol}${type} - IPv6 ${index - 3} : ${port}`;
             break;
         default:
-            remark = `💦 ${protocol}${type} - Clean IP ${index - 5} : ${port}`;
+            remark = ` ${protocol}${type} - Clean IP ${index - 5} : ${port}`;
             break;
     }
 
